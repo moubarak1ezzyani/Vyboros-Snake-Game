@@ -1,1 +1,15 @@
-# The master blueprint for compiling  
+cmake_minimum_required(VERSION 3.10)
+project(VyborosSnake VERSION 1.0)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+set(SFML_DIR "${CMAKE_SOURCE_DIR}/vendor/SFML/lib/cmake/SFML")
+
+# 1. Add 'Main' to the required components
+find_package(SFML 3 COMPONENTS Graphics Window System Main REQUIRED)
+
+add_executable(VyborosSnake src/main.cpp)
+
+# 2. Add 'PRIVATE' and link 'SFML::Main'
+target_link_libraries(VyborosSnake PRIVATE SFML::Graphics SFML::Window SFML::System SFML::Main)
