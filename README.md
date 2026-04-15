@@ -25,7 +25,7 @@ vyboros-snake/              # (Or whatever name you chose)
     └── Board.cpp
 ````
 
-## Your Working Branches (Examples):
+## Working Branches:
 
 feature/cmake-setup (Your first branch)
 
