@@ -1,3 +1,4 @@
 # Ignores compiled files (like the build/ folder)
 vendor/
 build/
+debug_files/
