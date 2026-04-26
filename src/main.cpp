@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode({800, 600}), "Vyboros Snake - SFML 3 Works!");
+    sf::RenderWindow window(sf::VideoMode({800, 600}), "Vyboros Snake - Main Window");
 
     while (window.isOpen()) {
         // SFML 3 -> events
