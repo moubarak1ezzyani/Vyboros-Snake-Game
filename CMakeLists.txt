@@ -6,10 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(SFML_DIR "${CMAKE_SOURCE_DIR}/vendor/SFML/lib/cmake/SFML")
 
-# -> Add 'Main' to the required components
 find_package(SFML 3 COMPONENTS Graphics Window System Main REQUIRED)
 
 add_executable(VyborosSnake src/main.cpp src/Game.cpp src/Snake.cpp)
 
-# -> Add 'PRIVATE' and link 'SFML::Main'
 target_link_libraries(VyborosSnake PRIVATE SFML::Graphics SFML::Window SFML::System SFML::Main)
