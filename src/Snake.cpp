@@ -34,7 +34,7 @@ void Snake::draw(sf::RenderTarget& target, int tileSize) const {
     segment.setFillColor(sf::Color::Green);
 
     for (const auto& part : body) {
-        segment.setPosition(sf::Vector2f(part.x * tileSize, part.y * tileSize));
+        segment.setPosition(sf::Vector2f(static_cast<float>(part.x * tileSize), static_cast<float>(part.y * tileSize)));
         target.draw(segment);
     }
 }
